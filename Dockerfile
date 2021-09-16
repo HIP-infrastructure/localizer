@@ -16,7 +16,7 @@ WORKDIR /apps/${APP_NAME}
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install --no-install-recommends -y \ 
-    curl unzip libgomp1 libxkbcommon-x11-0 && \
+    curl unzip libgomp1 libxkbcommon-x11-0 libxcb-keysyms1 && \
     curl -O -L https://www.dropbox.com/s/jyzji922g1qur4u/Localizer.zip && \
     mkdir ./install && \
     unzip -q -d ./install Localizer.zip && \
