@@ -16,13 +16,13 @@ WORKDIR /apps/${APP_NAME}
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install --no-install-recommends -y \ 
-    curl unzip && \
-    curl -O -L https://www.dropbox.com/home?preview=Localizer.zip && \
+    curl unzip libgomp1 libxkbcommon-x11-0 && \
+    curl -O -L https://www.dropbox.com/s/jyzji922g1qur4u/Localizer.zip && \
     mkdir ./install && \
     unzip -q -d ./install Localizer.zip && \
     chmod 755 ./install/Localizer/Localizer && \
     rm Localizer.zip && \
-    apt-get remove -y --purge curl && \
+    apt-get remove -y --purge curl unzip && \
     apt-get autoremove -y --purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
