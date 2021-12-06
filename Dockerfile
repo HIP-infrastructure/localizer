@@ -17,7 +17,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install --no-install-recommends -y \ 
     curl unzip libgomp1 libxkbcommon-x11-0 libxcb-keysyms1 && \
-    curl -O -L https://github.com/CRNL-Eduwell/Localizer/releases/download/V${APP_VERSION}/Localizer.${APP_VERSION}.linux64.zip && \
+    curl -OL# https://github.com/CRNL-Eduwell/Localizer/releases/download/V${APP_VERSION}/Localizer.${APP_VERSION}.linux64.zip && \
     mkdir ./install && \
     unzip -q -d ./install Localizer.${APP_VERSION}.linux64.zip && \
     chmod 755 ./install/Localizer.${APP_VERSION}.linux64/Localizer && \
