@@ -27,7 +27,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ENV APP_SHELL="no"
+ENV APP_SPECIAL="no"
 ENV APP_CMD="/apps/${APP_NAME}/install/Localizer.${APP_VERSION}.linux64/Localizer"
 ENV PROCESS_NAME="/apps/${APP_NAME}/install/Localizer.${APP_VERSION}.linux64/Localizer"
 ENV APP_DATA_DIR_ARRAY=""
