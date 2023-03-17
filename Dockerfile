@@ -22,7 +22,7 @@ RUN apt-get update && \
     curl unzip libgomp1 libxkbcommon-x11-0 libxcb-keysyms1 \
     libglib2.0-0 libdbus-1-3 libfftw3-single3 libxcb-icccm4 \
     libxcb-randr0 libxcb-render-util0 libxcb-shape0 && \
-    curl -OL# https://github.com/CRNL-Eduwell/Localizer/releases/download/V${APP_VERSION}/Localizer.${APP_VERSION}.linux64.zip && \
+    curl -sSOL https://github.com/CRNL-Eduwell/Localizer/releases/download/V${APP_VERSION}/Localizer.${APP_VERSION}.linux64.zip && \
     mkdir ./install && \
     unzip -q -d ./install Localizer.${APP_VERSION}.linux64.zip && \
     chmod 755 ./install/Localizer.${APP_VERSION}.linux64/Localizer && \
