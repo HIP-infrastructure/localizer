@@ -25,7 +25,7 @@ RUN apt-get update && \
     curl -sSOL https://github.com/CRNL-Eduwell/Localizer/releases/download/V${APP_VERSION}/Localizer.${APP_VERSION}.linux64.zip && \
     mkdir ./install && \
     unzip -q -d ./install Localizer.${APP_VERSION}.linux64.zip && \
-    chmod 755 ./install/Localizer.${APP_VERSION}.linux64/Localizer && \
+    chmod -R 757 ./install/Localizer.${APP_VERSION}.linux64 && \
     rm Localizer.${APP_VERSION}.linux64.zip && \
     apt-get remove -y --purge curl unzip && \
     apt-get autoremove -y --purge && \
